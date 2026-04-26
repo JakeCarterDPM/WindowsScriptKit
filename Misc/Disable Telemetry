@@ -1,0 +1,13 @@
+Group Policy - Telemetry
+"HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d "0" /f
+"HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d "0" /f
+
+Windows Defender
+- Virus & Threat protection settings: Cloud-delivered protection (0 = Off, 2 = On?)
+"HKLM\software\microsoft\windows defender\spynet" /v "spynetreporting" /t REG_DWORD /d "0" /f
+
+- Virus & Threat protection settings: Automatic sample submission (0 = Off, 1 = On)
+"HKLM\software\microsoft\windows defender\spynet" /v "submitsamplesconsent" /t REG_DWORD /d "0" /f
+
+DiagTrack (Connected User Experiences and Telemetry)
+"HKLM\SYSTEM\CurrentControlSet\Services\DiagTrack" /v "Start" /t REG_DWORD /d "4" /f 
